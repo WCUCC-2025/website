@@ -6,6 +6,7 @@ on:
 
 jobs:
   congrats:
+    name: congratsbot
     if: ${{ github.repository_owner == 'WCUCC-2025' }}
     uses: withastro/automation/.github/workflows/congratsbot.yml@main
     secrets:

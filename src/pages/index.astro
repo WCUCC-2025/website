@@ -1,16 +1,8 @@
 ---
-
+import Base from '@src/layouts/Base.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>WCUCC 2025</h1>
-	</body>
-</html>
+<Base title="Home">
+	<h1>WCUCC 2025</h1>
+	<a href="testing/hero-test" class="underline text-blue-500 hover:text-blue-400">Testing: Hero Test</a>
+</Base>

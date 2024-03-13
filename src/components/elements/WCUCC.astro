@@ -1,0 +1,45 @@
+---
+
+---
+
+<section
+	id="hero"
+	class="flex h-screen w-screen flex-col items-start justify-center bg-wcucc-coral-bg text-wcucc-coral-content sm:justify-start"
+>
+	<div
+		class="ml-auto flex w-4/5 flex-col justify-center sm:mt-auto sm:h-3/4 sm:w-full sm:pl-4"
+	>
+		<div class="flex flex-row">
+			<span class="fade-in-left mr-2 inline w-2 bg-wcucc-coral-500">
+			</span>
+			<h3 class="fade-in-left text-xl">
+				Western Canada Undergraduate Chemistry Conference
+			</h3>
+		</div>
+		<div class="flex h-full flex-col @container">
+			<h1 class="fade-in-left text-9xl font-bold sm:text-[24cqi]">
+				WCUCC
+			</h1>
+			<h1 class="fade-in-left text-5xl font-bold">
+				Discover how we <span id="typer" class="text-wcucc-coral-500"
+					></span
+				>
+			</h1>
+		</div>
+	</div>
+</section>
+<script>
+	import Typed from 'typed.js';
+	new Typed('#typer', {
+		strings:
+			'innovate, create, design, engineer, experiment, teach, learn'.split(
+				', '
+			),
+		typeSpeed: 100,
+		backSpeed: 50,
+		backDelay: 1000,
+		smartBackspace: true,
+		loop: true,
+		shuffle: true
+	});
+</script>

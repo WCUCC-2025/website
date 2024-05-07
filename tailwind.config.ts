@@ -5,6 +5,9 @@ const config: Config = {
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
     theme: {
         extend: {
+			borderRadius: {
+				ms: '0.250rem'
+			},
             screens: {
                 sm: { max: '640px' },
                 md: { max: '768px' },
@@ -36,7 +39,6 @@ const config: Config = {
     darkMode: 'class',
     corePlugins: {
         preflight: false,
-
         // We disable those because they add stuff to the CSS file even when unused
         filter: false,
         backdropFilter: false,

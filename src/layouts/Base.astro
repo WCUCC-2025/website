@@ -2,6 +2,9 @@
 // Base layout component.
 import BaseHead from '@src/components/meta/BaseHead.astro';
 import FontImport from '@src/components/meta/FontImport.astro';
+import Nav from '@src/components/Nav.astro';
+
+import 'remixicon/fonts/remixicon.css'
 import '@src/animations.css';
 
 interface Props {
@@ -17,6 +20,13 @@ const { title } = Astro.props;
 		<FontImport />
 	</head>
 	<body class="font-rubik">
+		<Nav></Nav>
 		<slot />
 	</body>
+	<style is:global>
+	a {
+		color: inherit;
+		text-decoration: inherit;
+	}
+	</style>
 </html>

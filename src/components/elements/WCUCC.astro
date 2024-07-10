@@ -1,43 +1,65 @@
 ---
+import ConfImg from "../../../public/ConferenceDates.svg";
 ---
 
 <section
-    id="hero"
-    class="flex h-screen w-screen flex-col items-start justify-center bg-[url('/home-hero-bg.svg')] text-white sm:justify-start"
+	id="hero"
+	class="flex h-screen w-screen flex-col items-start justify-center bg-[url('/home-hero-bg-c.svg')] bg-center text-white sm:justify-start"
 >
-    <div
-        class="ml-auto flex w-4/5 flex-col justify-center sm:mt-auto sm:h-3/4 sm:w-full sm:pl-4"
-    >
-        <div class="flex flex-row">
-            <span class="fade-in-left mr-2 inline w-2 bg-teal-500">
-            </span>
-            <h3 class="fade-in-left text-xl bg-teal-500 bg-opacity-5 p-2">
-                Western Canada Undergraduate Chemistry Conference
-            </h3>
-        </div>
-        <div class="flex h-full flex-col @container">
-            <h1 class="fade-in-left text-9xl font-bold sm:text-[24cqi]">
-                WCUCC 2025
-            </h1>
-            <h1 class="fade-in-left text-5xl font-bold">
-                Discover how we <span id="typer" class="text-wcucc-coral-500"
-                ></span>
-            </h1>
-        </div>
-    </div>
+	<div
+		class="ml-auto flex w-4/5 flex-col justify-center sm:mt-auto sm:h-3/4 sm:w-full sm:pl-4"
+	>
+		<div class="flex flex-row my-10">
+			<span class="fade-in-left inline w-2 bg-teal-500"> </span>
+			<h3 class="fade-in-left bg-teal-500 bg-opacity-5 pl-4 p-2 text-xl">
+				Western Canada Undergraduate Chemistry Conference
+			</h3>
+		</div>
+		<div class="flex h-full flex-col @container">
+			<h1 class="fade-in-left text-9xl font-bold sm:text-[24cqi]">
+				WCUCC 2025
+			</h1>
+			<h1 class="fade-in-left text-5xl font-bold">
+				Discover how we <span id="typer" class="text-wcucc-coral-400"
+				></span>
+			</h1>
+		</div>
+	</div>
+</section>
+<section
+	id="conference-dates"
+	class="jusify-center flex h-screen w-screen flex-row items-center bg-gradient-to-b from-[#1a3548] to-[#111B21]"
+>
+	<div
+		class="ml-auto flex w-4/5 flex-col justify-center sm:mt-auto sm:h-3/4 sm:w-full sm:pl-4"
+	>
+		<div class="flex flex-row my-10">
+			<span class="fade-in-left inline w-2 bg-[#F17F55]"> </span>
+			<h3 class="fade-in-left bg-[#F17F55] bg-opacity-5 pl-4 p-2 text-xl text-white">
+				Conference Dates | May 7 - 12, 2024
+			</h3>
+		</div>
+		<div class="flex h-full flex-row justify-between mr-10 @container">
+			<div class="flex flex-row justify-center items-center">
+				<h1 class="fade-in-left text-9xl mr-5 font-bold sm:text-[24cqi] text-white">80</h1>
+				<div class="fade-in-left text-4xl font-bold sm:text-[24cqi] text-white flex flex-col justify-center items-start"><h1 class="p-2">DAYS</h1><h1 class="p-2">TO GO</h1></div>
+			</div>
+			<img src={ConfImg.src} />
+		</div>
+	</div>
 </section>
 <script>
-    import Typed from 'typed.js';
-    new Typed('#typer', {
-        strings:
-            'innovate, create, design, synthesize, pipette, analyze, experiment, teach, learn'.split(
-                ', '
-            ),
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 1000,
-        smartBackspace: true,
-        loop: true,
-        shuffle: true,
-    });
+	import Typed from 'typed.js';
+	new Typed('#typer', {
+		strings:
+			'innovate, create, design, synthesize, pipette, analyze, experiment, teach, learn'.split(
+				', '
+			),
+		typeSpeed: 100,
+		backSpeed: 50,
+		backDelay: 1000,
+		smartBackspace: true,
+		loop: true,
+		shuffle: true,
+	});
 </script>

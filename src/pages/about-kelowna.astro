@@ -2,7 +2,7 @@
 import Navbar from '../components/Nav.astro';
 ---
 
-<div class="absolute w-screen">
+<div class="absolute w-screen bg-white">
   <Navbar />
   <!-- Ideal Image size: 1024px width x 384px height -->
   <!-- Recommended aspect ratio would be 2.67:1 -->
@@ -31,6 +31,34 @@ import Navbar from '../components/Nav.astro';
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
     </button>
+  </div>
+
+  <div class="relative w-full h-80 bg-gray-300 mt-10 font-rubik">
+    <div class="absolute top-4 left-4 text-4xl font-bold">
+      <div>WELCOME TO</div>
+      <div>KELOWNA</div>
+    </div>
+    <div class="absolute bottom-4 right-4 text-4xl font-bold text-right">
+      <div>WHERE NATURE</div>
+      <div>MEETS THE CITY</div>
+      <a href="#mountain-knox" class="block mt-4 text-2xl text-blue-500 underline items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+        Places to visit
+      </a>
+    </div>
+  </div>
+
+  <!-- KNOX Mountain -->
+  <div id="mountain-knox" class="flex w-full h-screen bg-gray-600 mt-10">
+    <div class="w-1/3 h-1/3 bg-amber-900 ml-20 m-auto"></div>
+    <div class="w-2/3 flex items-center justify-center">
+      <div class="text-center">
+        <h2 class="text-4xl font-bold font-rubik text-left">KNOX MOUNTAIN</h2>
+        <p class="mt-4 text-xl text-left ">This is some placeholder text information that goes alongside the picture of Knox Mountain.</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -67,3 +95,11 @@ import Navbar from '../components/Nav.astro';
     window.addEventListener('resize', updateCarouselPosition);
   });
 </script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+  .font-rubik {
+    font-family: 'Rubik';
+  }
+</style>

@@ -1,0 +1,69 @@
+---
+import Navbar from '../components/Nav.astro';
+---
+
+<div class="absolute w-screen">
+  <Navbar />
+  <!-- Ideal Image size: 1024px width x 384px height -->
+  <!-- Recommended aspect ratio would be 2.67:1 -->
+  <!-- Carousel Container with limited height and width -->
+  <div class="relative w-full mt-20 flex justify-center">
+    <!-- Carousel Wrapper -->
+    <div id="carousel" class="carousel w-4/5 max-w-4xl h-96 overflow-hidden relative">
+      <!-- Carousel Images -->
+      <div id="carouselInner" class="flex transition-transform duration-300 ease-in-out">
+        <img src="/pic1.png" alt="Picture 1" class="w-full h-full object-contain flex-shrink-0">
+        <img src="/pic1.png" alt="Picture 2" class="w-full h-full object-contain flex-shrink-0">
+        <img src="/pic1.png" alt="Picture 3" class="w-full h-full object-contain flex-shrink-0">
+      </div>
+    </div>
+
+    <!-- Left Arrow -->
+    <button id="prevButton" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white p-2 rounded-full shadow-lg hover:bg-opacity-100 hover:scale-110 transition-all">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <!-- Right Arrow -->
+    <button id="nextButton" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white p-2 rounded-full shadow-lg hover:bg-opacity-100 hover:scale-110 transition-all">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  // Ensure the script runs after the DOM has fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    const carouselInner = document.getElementById('carouselInner');
+    const images = carouselInner ? carouselInner.children : [];
+    const totalImages = images.length;
+
+    let currentIndex = 0;
+
+    // Function to update the carousel position
+    function updateCarouselPosition() {
+      if (carouselInner) {
+        const carouselWidth = carouselInner.clientWidth;
+        const newTransformValue = -currentIndex * carouselWidth;
+        carouselInner.style.transform = `translateX(${newTransformValue}px)`;
+      }
+    }
+
+    // Event listeners for next and previous buttons
+    document.getElementById('nextButton')?.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalImages; // Loop back to the first image
+      updateCarouselPosition();
+    });
+
+    document.getElementById('prevButton')?.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Loop to the last image
+      updateCarouselPosition();
+    });
+
+    // Handle window resize to adjust position correctly
+    window.addEventListener('resize', updateCarouselPosition);
+  });
+</script>

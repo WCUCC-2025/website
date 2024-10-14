@@ -4,17 +4,18 @@ import Navbar from '../components/Nav.astro';
 
 <div class="absolute w-screen bg-white">
   <Navbar />
+  <!-- DESIGN IDEA => Magic scroll implementation for places to visit-->
   <!-- Ideal Image size: 1024px width x 384px height -->
   <!-- Recommended aspect ratio would be 2.67:1 -->
   <!-- Carousel Container with limited height and width -->
-  <div class="relative w-full mt-20 flex justify-center">
+  <div class="relative w-full h-[60vh] flex justify-center">
     <!-- Carousel Wrapper -->
-    <div id="carousel" class="carousel w-4/5 max-w-4xl h-96 overflow-hidden relative">
+    <div id="carousel" class="w-full h-full flex flex-col justify-center overflow-hidden relative object-cover">
       <!-- Carousel Images -->
-      <div id="carouselInner" class="flex transition-transform duration-300 ease-in-out">
-        <img src="/pic1.png" alt="Picture 1" class="w-full h-full object-contain flex-shrink-0">
-        <img src="/pic1.png" alt="Picture 2" class="w-full h-full object-contain flex-shrink-0">
-        <img src="/pic1.png" alt="Picture 3" class="w-full h-full object-contain flex-shrink-0">
+      <div id="carouselInner" class="flex h-full transition-transform duration-300 ease-in-out">
+        <img src="/pic2.jpg" alt="Picture 1" class="w-full h-full object-cover flex-shrink-0">
+        <img src="/pic2.jpg" alt="Picture 2" class="w-full h-full object-cover flex-shrink-0">
+        <img src="/pic2.jpg" alt="Picture 3" class="w-full h-full object-cover flex-shrink-0">
       </div>
     </div>
 
@@ -33,7 +34,7 @@ import Navbar from '../components/Nav.astro';
     </button>
   </div>
 
-  <div class="relative w-full h-80 bg-gray-300 mt-10 font-rubik">
+  <div class="relative w-full h-80 bg-gray-300 font-rubik">
     <div class="absolute top-4 left-4 text-4xl font-bold ml-10 mt-10">
       <div>WELCOME TO</div>
       <div>KELOWNA</div>
@@ -55,7 +56,7 @@ import Navbar from '../components/Nav.astro';
     <div class="w-2/3 flex items-center justify-center ml-40">
       <div class="w-2/3 h-1/3 bg-amber-900 ml-20 m-auto"></div>
       <div class="text-center ml-20">
-        <h2 class="text-4xl font-bold font-rubik text-left">KNOX MOUNTAIN</h2>
+        <h2 class="text-4xl font-bold text-left">KNOX MOUNTAIN</h2>
         <p class="mt-4 text-xl text-left ">This is some placeholder text information that goes alongside the picture of Knox Mountain.</p>
       </div>
     </div>
@@ -65,7 +66,7 @@ import Navbar from '../components/Nav.astro';
   <div id="okanagan-lake" class="flex w-full h-screen bg-gray-300">
     <div class="w-2/3 flex items-center justify-center ml-40">
       <div class="text-center ml-20">
-        <h2 class="text-4xl font-bold font-rubik text-left">OKANAGAN LAKE</h2>
+        <h2 class="text-4xl font-bold text-left">OKANAGAN LAKE</h2>
         <p class="mt-4 text-xl text-left ">This is some placeholder text information that goes alongside the picture of Knox Mountain.</p>
       </div>
       <div class="w-2/3 h-1/3 bg-amber-900 ml-20"></div>
